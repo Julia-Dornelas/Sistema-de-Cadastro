@@ -1,8 +1,11 @@
 
+.titulo{
+    background-color: #000000;
+}
 .menu {
-    background-color: rgb(197, 224, 216);
+    background-color: #44878f;
 }   
 
 .dados {
-    background-color: rgb(184, 227, 252);
+    background-color: #8caaa2;
 }
