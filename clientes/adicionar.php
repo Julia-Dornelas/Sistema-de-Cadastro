@@ -12,7 +12,7 @@
             <?php include '../includes/menu.php'; ?>
             <div class="col-9 dados">
                 <h3>Lista de clientes</h3>
-                <form action="">
+                <form action="add.php" method="post">
 
                     <div class="form-group ">
                         <label for="inputtext4">Nome:</label>

@@ -1,8 +1,10 @@
 <?php
 include '../includes/conexao.php';
+$sql = "select * from clientes";
 
+$resultado = $conexao->query($sql);
+mysqli_close($conexao);
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -28,33 +30,17 @@ include '../includes/conexao.php';
                         </tr>
                     </thead>
                     <tbody>
+                        <?php while($item = mysqli_fetch_object($resultado)){ ?>
                         <tr>
-                            <th scope="row">1</th>
-                            <td>Júlia</td>
-                            <td>julia@gmail.com</td>
+                            <th scope="row"><?php echo $item->id; ?> </th>
+                            <td><?php echo $item->nome; ?> </td>
+                            <td><?php echo $item->email; ?> </td>
                             <td>
                                 <a href="" class="btn btn-secondary btn-sm">Editar</a>
                                 <a href="" class="btn btn-danger btn-sm">Excluir</a>
                             </td>
                         </tr>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Júlia</td>
-                            <td>julia@gmail.com</td>
-                            <td>
-                                <a href="" class="btn btn-secondary btn-sm">Editar</a>
-                                <a href="" class="btn btn-danger btn-sm">Excluir</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Júlia</td>
-                            <td>julia@gmail.com</td>
-                            <td>
-                                <a href="" class="btn btn-secondary btn-sm">Editar</a>
-                                <a href="" class="btn btn-danger btn-sm">Excluir</a>
-                            </td>
-                        </tr>
+                        <?php }?>
 
                     </tbody>
                 </table>
