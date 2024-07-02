@@ -1,3 +1,8 @@
+<?php
+include '../includes/conexao.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 

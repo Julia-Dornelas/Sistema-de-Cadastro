@@ -12,11 +12,8 @@
             <?php include '../includes/menu.php'; ?>
             <div class="col-9 dados text-center">
                 <h3>Bem vindo ao sistema!</h3>
-                
             </div>
         </div>
-
-
     </div>
 
 
