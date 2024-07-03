@@ -1,10 +1,11 @@
 <?php
 include '../includes/conexao.php';
-$sql = "select * from clientes";
+$sql = "select * from produtos";
 
 $resultado = $conexao->query($sql);
 mysqli_close($conexao);
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,18 +15,19 @@ mysqli_close($conexao);
 
 <body>
     <h1 class="text-center titulo text-white">Sistema de Cadastro</h1> <br>
-    <div class="container">
+    <div class="container"> 
         <div class="row">
             <?php include '../includes/menu.php'; ?>
             <div class="col-9 dados">
-                <h3 class="text-center">Lista de clientes</h3>
+                <h3 class="text-center">Lista de produtos</h3>
                 <a href="adicionar.php" class="btn btn-success btn-smv ">Adicionar</a>
                 <table class="table table-striped">
                     <thead>
                         <tr>
                             <th scope="col">#</th>
                             <th scope="col">Nome</th>
-                            <th scope="col">Email</th>
+                            <th scope="col">categoria</th>
+                            <th scope="col">Preço</th>
                             <th scope="col">Ações</th>
                         </tr>
                     </thead>
@@ -34,7 +36,8 @@ mysqli_close($conexao);
                             <tr>
                                 <th scope="row"><?php echo $item->id; ?> </th>
                                 <td><?php echo $item->nome; ?> </td>
-                                <td><?php echo $item->email; ?> </td>
+                                <td><?php echo $item->categoria; ?> </td>
+                                <td><?php echo $item->preco; ?> </td>
                                 <td>
                                     <a href="" class="btn btn-secondary btn-sm">Editar</a>
                                     <a href="" class="btn btn-danger btn-sm">Excluir</a>
