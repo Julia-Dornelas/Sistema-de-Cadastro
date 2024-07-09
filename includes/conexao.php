@@ -6,5 +6,3 @@ if(!$conexao){
     echo "Erro nº:" . mysqli_connect_errno() .PHP_EOL; 
     echo "Erro" . mysqli_connect_error() . PHP_EOL;
 }
-
-echo "Conectouuuu" . PHP_EOL;

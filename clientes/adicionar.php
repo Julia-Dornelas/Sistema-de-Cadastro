@@ -37,11 +37,11 @@
                     <div>
                         <label for="exampleFormControlSelect1" name="campoSexo">Sexo</Em>?</label>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" id="exampleRadios1" value="Masculino" checked name="campoSexo">
+                            <input class="form-check-input" type="radio" id="exampleRadios1" value="0" checked name="campoSexo">
                             <label class="form-check-label" for="exampleRadios1">Masculino</label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" id="exampleRadios2" value="Feminino" name="campoSexo">
+                            <input class="form-check-input" type="radio" id="exampleRadios2" value="1" name="campoSexo">
                             <label class="form-check-label" for="exampleRadios2">Feminino</label>
 
                         </div> <br>

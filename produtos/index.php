@@ -39,8 +39,8 @@ mysqli_close($conexao);
                                 <td><?php echo $item->categoria; ?> </td>
                                 <td><?php echo $item->preco; ?> </td>
                                 <td>
-                                    <a href="" class="btn btn-secondary btn-sm">Editar</a>
-                                    <a href="" class="btn btn-danger btn-sm">Excluir</a>
+                                    <a href="editar.php?id=<?php echo $item->id;?>" class="btn btn-secondary btn-sm">Editar</a>
+                                    <a href="javascript:excluir(<?php echo $item->id;?>)" class="btn btn-danger btn-sm">Excluir</a>
                                 </td>
                             </tr>
                         <?php } ?>
@@ -56,6 +56,17 @@ mysqli_close($conexao);
 
 
     <?php include '../includes/js.php'; ?>
+
+     <!-- JS para excluir -->
+
+     <script>
+        function excluir(id) {
+            if (confirm("Tem certeza que deseja excluir?")) {
+                window.location.href = "del.php?id=" + id;
+            }
+        }
+    </script>
+
 </body>
 
 </html>
