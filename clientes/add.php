@@ -15,4 +15,4 @@ $sql = "insert into clientes(nome, email, cpf, data, sexo, obs)
 
 $conexao->query($sql);
 
-header("location: index.php");
+header("location: index.php"); 

@@ -1,4 +1,3 @@
-
 <?php
 
 $id = $_POST['campoId'];
@@ -15,4 +14,4 @@ $sql = "update clientes set nome='$nome', email='$email', cpf='$cpf', data='$dat
 
 $conexao->query($sql);
 
-header("location: ../clientes");
+header("location: ../clientes");  
