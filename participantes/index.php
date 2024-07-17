@@ -14,7 +14,7 @@ mysqli_close($conexao);
 
 <body>
     <h1 class="text-center titulo text-white">Sistema de Cadastro</h1> <br>
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <?php include '../includes/menu.php'; ?>
             <div class="col-9 dados">
@@ -26,7 +26,7 @@ mysqli_close($conexao);
                             <th scope="col">#</th>
                             <th scope="col">Nome</th>
                             <th scope="col">Email</th>
-                            <th scope="col">telefone</th>
+                            <th scope="col">Selecionado</th>
                             <th scope="col">Ações</th>
                         </tr>
                     </thead>
@@ -36,7 +36,7 @@ mysqli_close($conexao);
                                 <th scope="row"><?php echo $item->id; ?> </th>
                                 <td><?php echo $item->nome; ?> </td>
                                 <td><?php echo $item->email; ?> </td>
-                                <td><?php echo $item->telefone; ?> </td>
+                                <td><?php if ($item->selecionado){echo "Sim";} else {echo "Não";} ?> </td>
                                 <td>
                                     <a href="editar.php?id=<?php echo $item->id; ?>" class="btn btn-secondary btn-sm">Editar</a>
                                     <a href="javascript:excluir(<?php echo $item->id;?>)" class="btn btn-danger btn-sm">Excluir</a>

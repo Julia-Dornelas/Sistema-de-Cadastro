@@ -6,12 +6,12 @@
 </head>
 
 <body>
-    <h1 class="text-center titulo text-white">Sistema de Cadastro</h1> <br>
-    <div class="container ">
+    <h1 class="text-center titulo text-white">Sistema de Cadastro</h1>
+    <div class="container-fluid">
         <div class="row">
             <?php include '../includes/menu.php'; ?>
-            <div class="col-9 dados text-center">
-                <h3>Bem vindo ao sistema!</h3>
+            <div class="col-9 dados text-center d-flex align-items-center justify-content-center    ">
+                <h1>Bem vindo ao sistema!</h1>
             </div>
         </div>
     </div>

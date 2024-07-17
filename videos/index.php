@@ -1,6 +1,6 @@
 <?php
 include '../includes/conexao.php';
-$sql = "select * from atividades";
+$sql = "select * from videos";
 
 $resultado = $conexao->query($sql);
 mysqli_close($conexao);
@@ -18,15 +18,15 @@ mysqli_close($conexao);
         <div class="row">
             <?php include '../includes/menu.php'; ?>
             <div class="col-9 dados">
-                <h3 class="text-center">Lista de atividades</h3>
+                <h3 class="text-center">Lista de vídeos</h3>
                 <a href="adicionar.php" class="btn btn-success btn-smv ">Adicionar</a>
                 <table class="table table-striped">
                     <thead>
                         <tr>
                             <th scope="col">#</th>
-                            <th scope="col">Nome</th>
-                            <th scope="col">Horário</th>
-                            <th scope="col">Quantidade</th>
+                            <th scope="col">Titulo</th>
+                            <th scope="col">Autor</th>
+                            <th scope="col">Data</th>
                             <th scope="col">Ações</th>
                         </tr>
                     </thead>
@@ -34,14 +34,12 @@ mysqli_close($conexao);
                         <?php while ($item = mysqli_fetch_object($resultado)) { ?>
                             <tr>
                                 <th scope="row"><?php echo $item->id; ?> </th>
-                                <td><?php echo $item->nome; ?> </td>
-                                <td><?php echo $item->hora_inicio; ?> </td>
-                                <td><?php echo $item->numero; ?> </td>
-
-                                <!--BOTÕES-->
+                                <td><?php echo $item->titulo; ?> </td>
+                                <td><?php echo $item->autor; ?> </td>
+                                <td><?php echo $item->data; ?> </td>
                                 <td>
                                     <a href="editar.php?id=<?php echo $item->id; ?>" class="btn btn-secondary btn-sm">Editar</a>
-                                    <a href="javascript:excluir(<?php echo $item->id; ?>)" class="btn btn-danger btn-sm">Excluir</a>
+                                    <a href="javascript:excluir(<?php echo $item->id;?>)" class="btn btn-danger btn-sm">Excluir</a>
                                 </td>
                             </tr>
                         <?php } ?>

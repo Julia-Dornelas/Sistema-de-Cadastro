@@ -14,7 +14,7 @@ mysqli_close($conexao);
 
 <body>
     <h1 class="text-center titulo text-white">Sistema de Cadastro</h1> <br>
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <?php include '../includes/menu.php'; ?>
             <div class="col-9 dados">

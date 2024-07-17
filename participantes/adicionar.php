@@ -11,7 +11,7 @@
         <div class="row">
             <?php include '../includes/menu.php'; ?>
             <div class="col-9 dados">
-                <h3>Lista de clientes</h3>
+                <h3>Lista de participantes</h3>
                 <form action="add.php" method="post">
 
                     <div class="form-group ">
