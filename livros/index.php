@@ -1,6 +1,6 @@
 <?php
 include '../includes/conexao.php';
-$sql = "select * from participantes";
+$sql = "select * from livros";
 
 $resultado = $conexao->query($sql);
 mysqli_close($conexao);
@@ -14,29 +14,28 @@ mysqli_close($conexao);
 
 <body class="bg-dark">
     <h1 class="text-center titulo text-white">Sistema de Cadastro</h1>
-    <div class="container-fluid">
+    <div class="container-fluid ">
         <div class="row">
             <?php include '../includes/menu.php'; ?>
             <div class="col-9 dados">
-                <h3 class="text-center">Lista de participantes</h3>
+                <h3 class="text-center">Lista de livros</h3>
                 <a href="adicionar.php" class="btn btn-success btn-smv ">Adicionar</a>
                 <table class="table table-striped">
                     <thead>
                         <tr>
                             <th scope="col">#</th>
-                            <th scope="col">Nome</th>
-                            <th scope="col">Email</th>
-                            <th scope="col">Selecionado</th>
-                            <th scope="col">Ações</th>
+                            <th scope="col">Titulo</th>
+                            <th scope="col">Autor</th>
+                            <th scope="col">Páginas</th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php while ($item = mysqli_fetch_object($resultado)) { ?>
                             <tr>
                                 <th scope="row"><?php echo $item->id; ?> </th>
-                                <td><?php echo $item->nome; ?> </td>
-                                <td><?php echo $item->email; ?> </td>
-                                <td><?php if ($item->selecionado){echo "Sim";} else {echo "Não";} ?> </td>
+                                <td><?php echo $item->titulo; ?> </td>
+                                <td><?php echo $item->autor; ?> </td>
+                                <td><?php echo $item->numero_paginas; ?> </td>
                                 <td>
                                     <a href="editar.php?id=<?php echo $item->id; ?>" class="btn btn-secondary btn-sm">Editar</a>
                                     <a href="javascript:excluir(<?php echo $item->id;?>)" class="btn btn-danger btn-sm">Excluir</a>

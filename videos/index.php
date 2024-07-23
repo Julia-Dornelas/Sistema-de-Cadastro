@@ -12,8 +12,8 @@ mysqli_close($conexao);
     <?php include '../includes/head.php'; ?>
 </head>
 
-<body>
-    <h1 class="text-center titulo text-white">Sistema de Cadastro</h1> <br>
+<body class="bg-dark">
+    <h1 class="text-center titulo text-white">Sistema de Cadastro</h1>
     <div class="container-fluid">
         <div class="row">
             <?php include '../includes/menu.php'; ?>

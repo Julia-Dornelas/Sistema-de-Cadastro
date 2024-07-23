@@ -18,9 +18,9 @@ $item = mysqli_fetch_object($resultado);
     <?php include '../includes/head.php'; ?>
 </head>
 
-<body>
+<body class="bg-dark">
     <h1 class="text-center bg-dark text-white ">Sistema de Cadastro</h1> <br>
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <?php include '../includes/menu.php'; ?>
             <div class="col-9 dados">

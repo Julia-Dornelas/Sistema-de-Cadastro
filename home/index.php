@@ -5,7 +5,7 @@
     <?php include '../includes/head.php'; ?>
 </head>
 
-<body>
+<body class="bg-dark">
     <h1 class="text-center titulo text-white">Sistema de Cadastro</h1>
     <div class="container-fluid">
         <div class="row">

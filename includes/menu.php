@@ -18,5 +18,8 @@
         <li class="nav-item">
             <a class="nav-link  badge-dark" href="../videos/">Vídeos</a>
         </li>
+        <li class="nav-item">
+            <a class="nav-link  badge-dark" href="../livros/">Livros</a>
+        </li>
     </ul>
 </div>
