@@ -26,7 +26,7 @@ mysqli_close($conexao);
                             <th scope="col">#</th>
                             <th scope="col">Titulo</th>
                             <th scope="col">Autor</th>
-                            <th scope="col">Data</th>
+                            <th scope="col">Video</th>
                             <th scope="col">Ações</th>
                         </tr>
                     </thead>
@@ -36,10 +36,13 @@ mysqli_close($conexao);
                                 <th scope="row"><?php echo $item->id; ?> </th>
                                 <td><?php echo $item->titulo; ?> </td>
                                 <td><?php echo $item->autor; ?> </td>
-                                <td><?php echo $item->data; ?> </td>
                                 <td>
+                                    <img src="https://img.youtube.com/vi/<?php echo $item->video; ?>/0.jpg" width="100px" alt="">
+                                </td>
+                                <td>
+                                    <a href="ver.php?id=<?php echo $item->id; ?>" class="btn btn-primary btn-sm">Visualizar</a>
                                     <a href="editar.php?id=<?php echo $item->id; ?>" class="btn btn-secondary btn-sm">Editar</a>
-                                    <a href="javascript:excluir(<?php echo $item->id;?>)" class="btn btn-danger btn-sm">Excluir</a>
+                                    <a href="javascript:excluir(<?php echo $item->id; ?>)" class="btn btn-danger btn-sm">Excluir</a>
                                 </td>
                             </tr>
                         <?php } ?>
